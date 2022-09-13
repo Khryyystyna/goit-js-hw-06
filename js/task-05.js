@@ -6,5 +6,8 @@ console.log(outputRef);
 
 inputRef.addEventListener("input", (event) => {
    outputRef.textContent = event.currentTarget.value;
-   return outputRef;
+   if (event.currentTarget.value === '') {
+      outputRef.textContent = 'Anonymous'
+   }
+   return;
 });
